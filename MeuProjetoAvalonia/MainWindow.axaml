@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ConversorUnidades.MainWindow"
+        Title="Conversor de Unidades" Width="500" Height="600">
+    <TabControl x:Name="TabControl">
+        <TabItem Header="Temperatura">
+            <StackPanel Margin="20">
+                <TextBlock Text="Selecione o tipo de conversão:"/>
+                <ListBox x:Name="TemperatureConversionTypeListBox">
+                    <ListBoxItem Content="Celsius para Fahrenheit"/>
+                    <ListBoxItem Content="Fahrenheit para Celsius"/>
+                    <ListBoxItem Content="Kelvin para Celsius"/>
+                    <ListBoxItem Content="Celsius para Kelvin"/>
+                </ListBox>
+                <TextBox x:Name="TemperatureInputValueTextBox" Margin="0,10" Watermark="Valor de entrada"/>
+                <Button Content="Converter" Click="OnConvertButtonClick" Margin="0,10"/>
+                <TextBox x:Name="TemperatureOutputValueTextBox" IsReadOnly="True" Watermark="Resultado"/>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Comprimento">
+            <StackPanel Margin="20">
+                <TextBlock Text="Selecione o tipo de conversão:"/>
+                <ListBox x:Name="LengthConversionTypeListBox">
+                    <ListBoxItem Content="Metros para Pés"/>
+                    <ListBoxItem Content="Pés para Metros"/>
+                    <ListBoxItem Content="Milhas para Quilômetros"/>
+                    <ListBoxItem Content="Quilômetros para Milhas"/>
+                </ListBox>
+                <TextBox x:Name="LengthInputValueTextBox" Margin="0,10" Watermark="Valor de entrada"/>
+                <Button Content="Converter" Click="OnConvertButtonClick" Margin="0,10"/>
+                <TextBox x:Name="LengthOutputValueTextBox" IsReadOnly="True" Watermark="Resultado"/>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Peso/Massa">
+            <StackPanel Margin="20">
+                <TextBlock Text="Selecione o tipo de conversão:"/>
+                <ListBox x:Name="WeightConversionTypeListBox">
+                    <ListBoxItem Content="Quilogramas para Libras"/>
+                    <ListBoxItem Content="Libras para Quilogramas"/>
+                    <ListBoxItem Content="Gramas para Onças"/>
+                    <ListBoxItem Content="Onças para Gramas"/>
+                </ListBox>
+                <TextBox x:Name="WeightInputValueTextBox" Margin="0,10" Watermark="Valor de entrada"/>
+                <Button Content="Converter" Click="OnConvertButtonClick" Margin="0,10"/>
+                <TextBox x:Name="WeightOutputValueTextBox" IsReadOnly="True" Watermark="Resultado"/>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Volume">
+            <StackPanel Margin="20">
+                <TextBlock Text="Selecione o tipo de conversão:"/>
+                <ListBox x:Name="VolumeConversionTypeListBox">
+                    <ListBoxItem Content="Litros para Galões"/>
+                    <ListBoxItem Content="Galões para Litros"/>
+                    <ListBoxItem Content="Mililitros para Onças Fluidas"/>
+                    <ListBoxItem Content="Onças Fluidas para Mililitros"/>
+                </ListBox>
+                <TextBox x:Name="VolumeInputValueTextBox" Margin="0,10" Watermark="Valor de entrada"/>
+                <Button Content="Converter" Click="OnConvertButtonClick" Margin="0,10"/>
+                <TextBox x:Name="VolumeOutputValueTextBox" IsReadOnly="True" Watermark="Resultado"/>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
